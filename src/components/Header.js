@@ -34,13 +34,31 @@ function Header(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton href="/" sx={{ textAlign: "center" }}>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton href="/about" sx={{ textAlign: "center" }}>
+            <ListItemText primary="About" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton href="/projects" sx={{ textAlign: "center" }}>
+            <ListItemText primary="Projects" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton href="/testimonials" sx={{ textAlign: "center" }}>
+            <ListItemText primary="Testimonials" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton href="/contact" sx={{ textAlign: "center" }}>
+            <ListItemText primary="Contact" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -67,14 +85,32 @@ function Header(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            Nahom
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
-              </Button>
-            ))}
+            <Button href="/" sx={{ color: "#fff" }}>
+              Home
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button href="/about" sx={{ color: "#fff" }}>
+              About
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button href="/projects" sx={{ color: "#fff" }}>
+              Projects
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button href="/testimonials" sx={{ color: "#fff" }}>
+              Testimonials
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Button href="/contact" sx={{ color: "#fff" }}>
+              Contact
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
