@@ -1,129 +1,155 @@
-// import React, { useState, useEffect } from "react";
-// import { db } from "../firebase.config";
-// import { axios } from "react-axios";
-// import { collection, addDoc } from "firebase/firestore";
+import React, { useState, useEffect } from "react";
+import { db } from "../firebase.config";
+import { collection, addDoc } from "firebase/firestore";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
-// import {
-//   MDBBtn,
-//   MDBModal,
-//   MDBModalDialog,
-//   MDBModalContent,
-//   MDBModalHeader,
-//   MDBModalTitle,
-//   MDBModalBody,
-//   MDBInput,
-//   MDBTextArea,
-// } from "mdb-react-ui-kit";
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
-// const FormModal = () => {
-//   const [basicModal, setBasicModal] = useState(false);
-//   const [data, setData] = useState({
-//     testimony: "",
-//     fullName: "",
-//     jobTitle: "",
-//     imageUrl: "",
-//   });
-//   const testimoniesFetchRef = collection(db, "testimonies");
-//   const { testimony, fullName, jobTitle, imageUrl } = data;
-//   const toggleShow = () => setBasicModal(!basicModal);
+export default function FormModal() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const [basicModal, setBasicModal] = useState(false);
+  const [data, setData] = useState({
+    testimony: "",
+    fullName: "",
+    jobTitle: "",
+    imageUrl: "",
+  });
+  const testimoniesFetchRef = collection(db, "testimonies");
+  const { testimony, fullName, jobTitle, imageUrl } = data;
+  const toggleShow = () => setBasicModal(!basicModal);
 
-//   const changeHandler = (e) => {
-//     setData({ ...data, [e.target.name]: e.target.value });
-//   };
+  const changeHandler = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
 
-//   const submitHandler = (e) => {
-//     e.preventDefault();
+  const submitHandler = (e) => {
+    e.preventDefault();
 
-//     addDoc(testimoniesFetchRef, data);
-//   };
+    addDoc(testimoniesFetchRef, data);
+    handleClose();
+  };
 
-//   return (
-//     <>
-//       <MDBBtn onClick={toggleShow}>Give your testimony</MDBBtn>
-//       <MDBModal show={basicModal} setShow={setBasicModal} tabIndex="-1">
-//         <MDBModalDialog>
-//           <MDBModalContent className="mContent">
-//             <MDBModalHeader>
-//               <MDBModalTitle>Your testimony</MDBModalTitle>
-//               <MDBBtn
-//                 className="btn-close"
-//                 color="none"
-//                 onClick={toggleShow}
-//               ></MDBBtn>
-//             </MDBModalHeader>
-//             <MDBModalBody>
-//               {" "}
-//               <div className="container">
-//                 <div>
-//                   <h2>Only sth good!</h2>
-//                 </div>
+  return (
+    <div>
+      <Button onClick={handleOpen}>What do you say about Nahom</Button>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box
+            sx={style}
+            style={{
+              minWidth: "30%",
+              borderRadius: "5px",
+              border: "#F6F9F3",
+            }}
+          >
+            <Typography
+              variant="h6"
+              component="h2"
+              align="center"
+              style={{
+                Width: "100%",
+                height: "3rem",
+                background: "#542D6B",
+                paddingTop: "0.5rem",
+                color: "lightgray",
+              }}
+            >
+              Add your testimony
+            </Typography>
+            <br />
+            <form style={{ padding: "1.5rem" }} onSubmit={submitHandler}>
+              <TextField
+                id="outlined-multiline-flexible"
+                label="Full Name"
+                multiline
+                maxRows={4}
+                style={{ width: "100%" }}
+                name="fullName"
+                value={fullName}
+                onChange={changeHandler}
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-multiline-static"
+                label="Job Title"
+                multiline
+                maxRows={4}
+                style={{ width: "100%" }}
+                name="jobTitle"
+                value={jobTitle}
+                onChange={changeHandler}
+                // onChange={handleChange}
+                // defaultValue="Default Value"
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-multiline-flexible"
+                label="Testimony"
+                multiline
+                rows={4}
+                style={{ width: "100%" }}
+                name="testimony"
+                value={testimony}
+                onChange={changeHandler}
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-multiline-flexible"
+                label="Picture"
+                multiline
+                maxRows={4}
+                style={{ width: "100%" }}
+                name="imageUrl"
+                value={imageUrl}
+                onChange={changeHandler}
+              />
+              <br />
+              <br />
 
-//                 <form className="form" onSubmit={submitHandler}>
-//                   <div className="input">
-//                     <MDBTextArea
-//                       label="Testimony"
-//                       id="textAreaExample"
-//                       rows={4}
-//                       name="testimony"
-//                       value={testimony}
-//                       onChange={changeHandler}
-//                     />
-//                   </div>
-//                   <div className="input">
-//                     <MDBInput
-//                       label="Full name"
-//                       id="typeText"
-//                       type="text"
-//                       name="fullName"
-//                       value={fullName}
-//                       onChange={changeHandler}
-//                     />
-//                   </div>
-//                   <div className="input">
-//                     <MDBInput
-//                       label="Job Title"
-//                       id="typeText"
-//                       type="text"
-//                       name="jobTitle"
-//                       value={jobTitle}
-//                       onChange={changeHandler}
-//                     />
-//                   </div>
-
-//                   <div className="input">
-//                     <MDBInput
-//                       label="Picture URL"
-//                       id="typeURL"
-//                       type="url"
-//                       name="imageUrl"
-//                       value={imageUrl}
-//                       onChange={changeHandler}
-//                     />
-//                   </div>
-//                   <div className="input">
-//                     <MDBBtn
-//                       className="mx-2"
-//                       tag="input"
-//                       type="submit"
-//                       value="Submit"
-//                       color="secondary"
-//                       onClick={toggleShow}
-//                     />
-//                   </div>
-//                 </form>
-//               </div>
-//             </MDBModalBody>
-
-//             {/* <MDBModalFooter>
-//               <MDBBtn color="secondary" onClick={toggleShow}>
-//                 Close
-//               </MDBBtn>
-//             </MDBModalFooter> */}
-//           </MDBModalContent>
-//         </MDBModalDialog>
-//       </MDBModal>
-//     </>
-//   );
-// };
-
-// export default FormModal;
+              <Button
+                variant="outlined"
+                color="primary"
+                style={{ marginTop: "1rem" }}
+                value="Submit"
+                onClick={submitHandler}
+              >
+                Add testimony
+              </Button>
+            </form>
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}

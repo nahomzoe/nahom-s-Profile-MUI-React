@@ -102,15 +102,6 @@ export default function Projects() {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
-          <Item>xs=2</Item>
-        </Grid>
-        <Grid item xs={2} sm={4} md={4}>
-          <Item>xs=2</Item>
-        </Grid>
-        <Grid item xs={2} sm={4} md={4}>
-          <Item>xs=2</Item>
-        </Grid>
       </Grid>
     </Box>
   );
