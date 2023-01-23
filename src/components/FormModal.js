@@ -8,6 +8,7 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import Chip from "@mui/material/Chip";
 
 const style = {
   position: "absolute",
@@ -31,9 +32,10 @@ export default function FormModal() {
     fullName: "",
     jobTitle: "",
     imageUrl: "",
+    linkedinUrl: "",
   });
   const testimoniesFetchRef = collection(db, "testimonies");
-  const { testimony, fullName, jobTitle, imageUrl } = data;
+  const { testimony, fullName, jobTitle, imageUrl, linkedinUrl } = data;
   const toggleShow = () => setBasicModal(!basicModal);
 
   const changeHandler = (e) => {
@@ -49,7 +51,14 @@ export default function FormModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>What do you say about Nahom</Button>
+      {/* <Button onClick={handleOpen}>What do you say about Nahom</Button> */}
+      <Chip
+        onClick={handleOpen}
+        label="Give your testimony"
+        color="success"
+        variant="outlined"
+        sx={{ ml: 3, mt: 3 }}
+      />
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -77,15 +86,15 @@ export default function FormModal() {
               style={{
                 Width: "100%",
                 height: "3rem",
-                background: "#542D6B",
+                background: "#222f3e",
                 paddingTop: "0.5rem",
-                color: "lightgray",
+                color: "#fff",
               }}
             >
               Add your testimony
             </Typography>
             <br />
-            <form style={{ padding: "1.5rem" }} onSubmit={submitHandler}>
+            <form onSubmit={submitHandler}>
               <TextField
                 id="outlined-multiline-flexible"
                 label="Full Name"
@@ -132,6 +141,18 @@ export default function FormModal() {
                 style={{ width: "100%" }}
                 name="imageUrl"
                 value={imageUrl}
+                onChange={changeHandler}
+              />
+              <br />
+              <br />
+              <TextField
+                id="outlined-multiline-flexible"
+                label="Linkedin"
+                multiline
+                maxRows={4}
+                style={{ width: "100%" }}
+                name="linkedinUrl"
+                value={linkedinUrl}
                 onChange={changeHandler}
               />
               <br />

@@ -9,6 +9,9 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import cookIt from "../Export/cookIt.png";
+
+import misa from "../Export/misa.png";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -37,9 +40,10 @@ export default function Projects() {
           <Card sx={{ maxWidth: 500 }}>
             <CardMedia
               component="img"
-              alt="green iguana"
+              alt="recipe"
+              style={{ height: "100%", width: "100%" }}
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={cookIt}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -51,8 +55,15 @@ export default function Projects() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Github</Button>
-              <Button size="small">Deployed</Button>
+              <Button
+                size="small"
+                href="https://github.com/nahomzoe/CookIT_Recipe_App-React-Firebase"
+              >
+                Github
+              </Button>
+              <Button size="small" href="https://cook-it-gamma.vercel.app/">
+                Deployed
+              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -60,9 +71,10 @@ export default function Projects() {
           <Card sx={{ maxWidth: 500 }}>
             <CardMedia
               component="img"
-              alt="green iguana"
+              alt="kitchen"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              style={{ height: "100%", width: "100%" }}
+              image={misa}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

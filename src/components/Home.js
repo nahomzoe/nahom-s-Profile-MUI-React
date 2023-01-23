@@ -7,7 +7,7 @@ import FormModal from "./FormModal";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import { db } from "../firebase.config";
 
@@ -32,7 +32,9 @@ const Home = () => {
     <div>
       <Title />
       <About style={{ float: "right" }} />
+
       <Projects />
+
       <Box sx={{ flexGrow: 1, mt: 10 }}>
         <Typography
           variant="h5"
@@ -56,6 +58,7 @@ const Home = () => {
             ))}
         </Grid>
       </Box>
+
       <FormModal />
     </div>
   );
