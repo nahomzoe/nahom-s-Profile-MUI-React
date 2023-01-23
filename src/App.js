@@ -7,8 +7,6 @@ import Testimony from "./components/Testimony";
 import Contact from "./components/Contact";
 import About from "./components/About";
 
-import CountriesList from "./components/CountriesList";
-
 function App() {
   return (
     <BrowserRouter>
