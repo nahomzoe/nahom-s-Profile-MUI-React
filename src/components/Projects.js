@@ -10,6 +10,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import cookIt from "../Export/cookIt.png";
+import country from "../Export/country.png";
 
 import misa from "../Export/misa.png";
 
@@ -96,8 +97,9 @@ export default function Projects() {
             <CardMedia
               component="img"
               alt="green iguana"
+              style={{ height: "100%", width: "100%" }}
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={country}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -109,8 +111,18 @@ export default function Projects() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Github</Button>
-              <Button size="small">Deployed</Button>
+              <Button
+                size="small"
+                href="https://github.com/nahomzoe/countriesApi-weatherAPI-redux-RTK"
+              >
+                Github
+              </Button>
+              <Button
+                size="small"
+                href="https://unique-faloodeh-ce5a33.netlify.app"
+              >
+                Deployed
+              </Button>
             </CardActions>
           </Card>
         </Grid>
