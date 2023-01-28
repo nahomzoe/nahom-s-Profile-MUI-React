@@ -55,7 +55,7 @@ export default function FormModal() {
       <Chip
         onClick={handleOpen}
         label="Give your testimony"
-        color="success"
+        color="primary"
         variant="outlined"
         sx={{ ml: 3, mt: 3 }}
       />

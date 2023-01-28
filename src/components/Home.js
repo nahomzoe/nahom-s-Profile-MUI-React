@@ -6,17 +6,47 @@ import Testimony from "./Testimony";
 import FormModal from "./FormModal";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import { db } from "../firebase.config";
 
 import { useEffect, useState } from "react";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
-
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 const Home = () => {
   const testimoniesFetchRef = collection(db, "testimonies");
   const [testimonies, setTestimonies] = useState([]);
+  // const trigger = useScrollTrigger({
+  //   target: window ? window() : undefined,
+  //   disableHysteresis: true,
+  //   threshold: 100,
+  // });
+
+  // const handleClick = (event) => {
+  //   const anchor = (event.target.ownerDocument || document).querySelector(
+  //     "#back-to-top-anchor"
+  //   );
+
+  //   if (anchor) {
+  //     anchor.scrollIntoView({
+  //       block: "center",
+  //     });
+  //   }
+  // };
+
+  //   return (
+  //     <Fade in={trigger}>
+  //       <Box
+  //         onClick={handleClick}
+  //         role="presentation"
+  //         sx={{ position: 'fixed', bottom: 16, right: 16 }}
+  //       >
+  //         {children}
+  //       </Box>
+  //     </Fade>
+  //   );
+  // }
 
   useEffect(() => {
     onSnapshot(testimoniesFetchRef, (snapshot) => {
@@ -58,8 +88,9 @@ const Home = () => {
             ))}
         </Grid>
       </Box>
+      {/* <Button onClick={trigger}>Hello</Button> */}
 
-      <FormModal />
+      {/* <FormModal /> */}
     </div>
   );
 };

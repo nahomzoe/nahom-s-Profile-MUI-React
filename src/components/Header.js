@@ -49,11 +49,11 @@ function Header(props) {
             <ListItemText primary="Projects" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <ListItemButton href="/testimonials" sx={{ textAlign: "center" }}>
             <ListItemText primary="Testimonials" />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
         <ListItem disablePadding>
           <ListItemButton href="/contact" sx={{ textAlign: "center" }}>
             <ListItemText primary="Contact" />
@@ -102,11 +102,11 @@ function Header(props) {
               Projects
             </Button>
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          {/* <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button href="/testimonials" sx={{ color: "#fff" }}>
               Testimonials
             </Button>
-          </Box>
+          </Box> */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button href="/contact" sx={{ color: "#fff" }}>
               Contact
