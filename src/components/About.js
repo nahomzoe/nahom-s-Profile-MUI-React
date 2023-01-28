@@ -19,14 +19,13 @@ export default function About() {
   return (
     <Grid container spacing={3}>
       <Grid item xs>
-        <Card sx={{ maxWidth: "28.5rem", float: "right" }}>
+        <Card sx={{ maxWidth: "28.5rem", float: "right", mt: 5.5 }}>
           {/* <Typography gutterBottom variant="h5" component="div">
         Lizard
       </Typography> */}
           <CardMedia
             component="img"
             alt="green iguana"
-            sx={{}}
             // height="540"
             src={picNahom}
           />
@@ -48,15 +47,15 @@ export default function About() {
           skill-set. Trained in an assortment of technologies, including HTML,
           CSS, JavaScript, React,Redux,TypeScript,Node.js, PHP, Symfony,
           Continuous Integration(AWS), Unit Testing, Content Management(Drupal),
-          MariaDB, and MicrosoftSQLServer. AlsoFigma,TrelloandDockerareintheset.
-          Abletoeffectively self-manage during independent projects, as well as
-          collaborate in a team setting.
+          MariaDB, and Microsoft SQL Server. Also Figma,Trello and Docker are in
+          the set. Able to effectively self-manage during independent projects,
+          as well as collaborate in a team setting.
           <RiDoubleQuotesR style={{ color: "rgb(188, 137, 42)" }} />
         </Typography>
         <br />
         <Divider />
         <br />
-        <List>
+        {/* <List>
           <ListItemText>
             {" "}
             . Involved in finding solutions for problems that have been hidden.
@@ -79,7 +78,7 @@ export default function About() {
             . Evaluated and became knowledgeable in new standards, technologies,
             and trends in website development.
           </ListItemText>
-        </List>
+        </List> */}
       </Grid>
     </Grid>
   );
