@@ -19,7 +19,7 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  p: 3.5,
 };
 
 export default function FormModal() {
@@ -51,7 +51,6 @@ export default function FormModal() {
 
   return (
     <div>
-      {/* <Button onClick={handleOpen}>What do you say about Nahom</Button> */}
       <Chip
         onClick={handleOpen}
         label="Give your testimony"
@@ -100,68 +99,64 @@ export default function FormModal() {
                 label="Full Name"
                 multiline
                 maxRows={4}
-                style={{ width: "100%" }}
+                style={{ width: "100%", marginBottom: "0.6rem" }}
                 name="fullName"
                 value={fullName}
                 onChange={changeHandler}
               />
-              <br />
+
               <br />
               <TextField
                 id="outlined-multiline-static"
                 label="Job Title"
                 multiline
                 maxRows={4}
-                style={{ width: "100%" }}
+                style={{ width: "100%", marginBottom: "0.6rem" }}
                 name="jobTitle"
                 value={jobTitle}
                 onChange={changeHandler}
-                // onChange={handleChange}
-                // defaultValue="Default Value"
               />
-              <br />
+
               <br />
               <TextField
                 id="outlined-multiline-flexible"
                 label="Testimony"
                 multiline
                 rows={4}
-                style={{ width: "100%" }}
+                style={{ width: "100%", marginBottom: "0.6rem" }}
                 name="testimony"
                 value={testimony}
                 onChange={changeHandler}
               />
-              <br />
+
               <br />
               <TextField
                 id="outlined-multiline-flexible"
                 label="Picture"
                 multiline
                 maxRows={4}
-                style={{ width: "100%" }}
+                style={{ width: "100%", marginBottom: "0.6rem" }}
                 name="imageUrl"
                 value={imageUrl}
                 onChange={changeHandler}
               />
-              <br />
+
               <br />
               <TextField
                 id="outlined-multiline-flexible"
                 label="Linkedin"
                 multiline
                 maxRows={4}
-                style={{ width: "100%" }}
+                style={{ width: "100%", marginBottom: "0.6rem" }}
                 name="linkedinUrl"
                 value={linkedinUrl}
                 onChange={changeHandler}
               />
-              <br />
-              <br />
 
               <Button
                 variant="outlined"
                 color="primary"
-                style={{ marginTop: "1rem" }}
+                style={{ marginTop: "0.7rem" }}
                 value="Submit"
                 onClick={submitHandler}
               >
