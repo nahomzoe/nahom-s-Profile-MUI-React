@@ -62,7 +62,7 @@ export default function Projects() {
               >
                 Github
               </Button>
-              <Button size="small" href="https://cook-it-gamma.vercel.app/">
+              <Button size="small" href="https://cook-it-app-v2.vercel.app/">
                 Deployed
               </Button>
             </CardActions>
