@@ -88,7 +88,7 @@ export default function Testimony({ testimony }) {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="linkedin">
+          <IconButton aria-label="linkedin" href={testimony.linkedinUrl}>
             <LinkedInIcon sx={{ color: "#5887d0" }} />
           </IconButton>
         </CardActions>

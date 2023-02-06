@@ -34,8 +34,8 @@ export default function Projects() {
       </Typography>
       <Grid
         container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 2, sm: 8, md: 12 }}
+        spacing={{ xs: 1, md: 6 }}
+        columns={{ xs: 2, sm: 8, md: 16 }}
       >
         <Grid item xs={2} sm={4} md={4}>
           <Card sx={{ maxWidth: 500 }}>
@@ -89,6 +89,40 @@ export default function Projects() {
             <CardActions>
               <Button size="small">Github</Button>
               <Button size="small">Deployed</Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={2} sm={4} md={4}>
+          <Card sx={{ maxWidth: 500 }}>
+            <CardMedia
+              component="img"
+              alt="green iguana"
+              style={{ height: "100%", width: "100%" }}
+              height="140"
+              image={country}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Countries and Weather app
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Lizards are a widespread group of squamate reptiles, with over
+                6,000 species, ranging across all continents except Antarctica
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/nahomzoe/countriesApi-weatherAPI-redux-RTK"
+              >
+                Github
+              </Button>
+              <Button
+                size="small"
+                href="https://unique-faloodeh-ce5a33.netlify.app"
+              >
+                Deployed
+              </Button>
             </CardActions>
           </Card>
         </Grid>
