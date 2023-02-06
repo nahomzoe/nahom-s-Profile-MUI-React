@@ -17,7 +17,7 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function About() {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={6}>
       <Grid item xs>
         <Card sx={{ maxWidth: "28.5rem", float: "right", mt: 5.5 }}>
           {/* <Typography gutterBottom variant="h5" component="div">

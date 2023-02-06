@@ -52,8 +52,9 @@ export default function Projects() {
                 CookIt/Recipe app
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                This is a basic food recipe app made with react and connected to
+                cloud database. It enables users to add, and delete thier own
+                recipes so they can share recipes with others.
               </Typography>
             </CardContent>
             <CardActions>
@@ -83,8 +84,10 @@ export default function Projects() {
                 Kitchen Managment app
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                This is kitchen management tool. It is meant to immensely help
+                the daily operation of hotel's and restaurant's Kitchens. It
+                makes workflow simple and smooth. Also enhances Decision support
+                System(DSS).
               </Typography>
             </CardContent>
             <CardActions>
@@ -107,8 +110,10 @@ export default function Projects() {
                 Weather/countries app
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                This is a basic country and weather app made with react/Redux
+                and favorite list stored to local storage. Favorite list or can
+                be used as a place I visted. It gives some basic info about
+                country and Weather.
               </Typography>
             </CardContent>
             <CardActions>
@@ -141,8 +146,10 @@ export default function Projects() {
                 Countries
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                This is a basic country app made with react/Redux/Toolkit. It
+                gives some basic info about a country. This was mini project
+                from Integrify as Techenical interview. UI was required to be
+                same as the screen shoot.
               </Typography>
             </CardContent>
             <CardActions>
