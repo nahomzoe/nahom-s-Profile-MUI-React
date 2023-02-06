@@ -135,7 +135,7 @@ export default function FormModal() {
               <br />
               <TextField
                 id="outlined-multiline-flexible"
-                label="Picture"
+                label="Picture link"
                 multiline
                 maxRows={4}
                 style={{ width: "100%", marginBottom: "0.6rem" }}
