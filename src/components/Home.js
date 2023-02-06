@@ -13,40 +13,10 @@ import { db } from "../firebase.config";
 
 import { useEffect, useState } from "react";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
+
 const Home = () => {
   const testimoniesFetchRef = collection(db, "testimonies");
   const [testimonies, setTestimonies] = useState([]);
-  // const trigger = useScrollTrigger({
-  //   target: window ? window() : undefined,
-  //   disableHysteresis: true,
-  //   threshold: 100,
-  // });
-
-  // const handleClick = (event) => {
-  //   const anchor = (event.target.ownerDocument || document).querySelector(
-  //     "#back-to-top-anchor"
-  //   );
-
-  //   if (anchor) {
-  //     anchor.scrollIntoView({
-  //       block: "center",
-  //     });
-  //   }
-  // };
-
-  //   return (
-  //     <Fade in={trigger}>
-  //       <Box
-  //         onClick={handleClick}
-  //         role="presentation"
-  //         sx={{ position: 'fixed', bottom: 16, right: 16 }}
-  //       >
-  //         {children}
-  //       </Box>
-  //     </Fade>
-  //   );
-  // }
 
   useEffect(() => {
     onSnapshot(testimoniesFetchRef, (snapshot) => {
@@ -76,7 +46,7 @@ const Home = () => {
 
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
+          spacing={{ xs: 2, md: 4 }}
           columns={{ xs: 2, sm: 8, md: 12 }}
           style={{ margin: "auto" }}
         >

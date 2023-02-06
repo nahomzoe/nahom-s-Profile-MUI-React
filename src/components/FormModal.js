@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Chip from "@mui/material/Chip";
+import { useSnackbar } from "notistack";
 
 const style = {
   position: "absolute",
@@ -23,6 +24,7 @@ const style = {
 };
 
 export default function FormModal() {
+  const { enqueueSnackbar } = useSnackbar();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -46,6 +48,7 @@ export default function FormModal() {
     e.preventDefault();
 
     addDoc(testimoniesFetchRef, data);
+    enqueueSnackbar("Thank you for your testimony!");
     handleClose();
   };
 

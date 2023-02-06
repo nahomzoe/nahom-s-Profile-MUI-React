@@ -8,6 +8,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FormModal from "./FormModal";
+import { SnackbarProvider } from "notistack";
 
 export default function Footer() {
   const [value, setValue] = React.useState(0);
@@ -34,9 +35,23 @@ export default function Footer() {
         }}
         style={{ margin: "auto" }}
       >
-        <BottomNavigationAction label="Linkedin" icon={<LinkedInIcon />} />
-        <BottomNavigationAction label="Github" icon={<GitHubIcon />} />
-        <BottomNavigationAction label="---------" icon={<FormModal />} />
+        <BottomNavigationAction
+          label="Linkedin"
+          href="https://www.linkedin.com/in/nahom-asfaw-6b78a6185/"
+          icon={<LinkedInIcon />}
+        />
+        <BottomNavigationAction
+          label="Github"
+          href="https://github.com/nahomzoe"
+          icon={<GitHubIcon />}
+        />
+        <SnackbarProvider maxSnack={3}>
+          <BottomNavigationAction
+            sx={{ mb: 3, mr: 4 }}
+            label="---------"
+            icon={<FormModal />}
+          />
+        </SnackbarProvider>
       </BottomNavigation>
     </Box>
   );

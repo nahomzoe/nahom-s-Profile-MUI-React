@@ -11,6 +11,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import cookIt from "../Export/cookIt.png";
 import country from "../Export/country.png";
+import con from "../Export/con.png";
 
 import misa from "../Export/misa.png";
 
@@ -133,7 +134,7 @@ export default function Projects() {
               alt="green iguana"
               style={{ height: "100%", width: "100%" }}
               height="140"
-              image={country}
+              image={con}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -145,15 +146,12 @@ export default function Projects() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button
-                size="small"
-                href="https://github.com/nahomzoe/countriesApi-weatherAPI-redux-RTK"
-              >
+              <Button size="small" href="https://github.com/nahomzoe/countries">
                 Github
               </Button>
               <Button
                 size="small"
-                href="https://unique-faloodeh-ce5a33.netlify.app"
+                href="https://tranquil-syrniki-c703bd.netlify.app/"
               >
                 Deployed
               </Button>
