@@ -80,7 +80,7 @@ export default function Projects() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Daily Kitchen/Managment app
+                Kitchen Managment app
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Lizards are a widespread group of squamate reptiles, with over
@@ -104,7 +104,7 @@ export default function Projects() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Countries and Weather app
+                Weather/countries app
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Lizards are a widespread group of squamate reptiles, with over
@@ -138,7 +138,7 @@ export default function Projects() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Countries and Weather app
+                Countries
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Lizards are a widespread group of squamate reptiles, with over
