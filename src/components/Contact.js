@@ -5,6 +5,9 @@ import "react-toastify/dist/ReactToastify.min.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 
 const Contact = () => {
   const {
@@ -16,7 +19,7 @@ const Contact = () => {
 
   // Function that displays a success toast on bottom right of the page when form submission is successful
   const toastifySuccess = () => {
-    toast("Form sent!", {
+    toast("Your message is sent to Nahom!", {
       position: "bottom-right",
       autoClose: 6000,
       hideProgressBar: true,
@@ -59,109 +62,113 @@ const Contact = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: "20rem", alignItems: "center" }}>
-      <Box
-        component="form"
-        sx={{
-          ml: "150%",
-        }}
-        noValidate
-        autoComplete="off"
+    <Box sx={{ margin: "auto" }}>
+      <Typography
+        variant="h5"
+        component="h2"
+        sx={{ textAlign: "start", mb: "2rem" }}
       >
-        <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
-          <div>
-            <TextField
-              label="Name"
-              name="name"
-              id="outlined-size-small"
-              size="small"
-              {...register("name", {
-                required: {
-                  value: true,
-                  message: "Please enter your name",
-                },
-                maxLength: {
-                  value: 30,
-                  message: "Please use 30 characters or less",
-                },
-              })}
+        Contact
+      </Typography>
+      <Typography variant="h6" component="h2" sx={{ textAlign: "center" }}>
+        Your message
+      </Typography>
+      <Paper
+        sx={{
+          margin: "auto",
+          p: 3,
+          width: "47ch",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+        }}
+      >
+        <Box component="form" noValidate autoComplete="off">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Box>
+              <TextField
+                label="Name"
+                name="name"
+                id="outlined-size-small"
+                size="small"
+                {...register("name", {
+                  required: {
+                    value: true,
+                  },
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: "40ch",
+                }}
+              />
+            </Box>
+            <Box>
+              <TextField
+                label="Email"
+                name="email"
+                id="outlined-size-small"
+                size="small"
+                {...register("email", {
+                  required: true,
+                  pattern:
+                    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: "40ch",
+                }}
+              />
+            </Box>
+            <Box>
+              <TextField
+                label="Subject"
+                name="subject"
+                id="outlined-size-small"
+                size="small"
+                {...register("subject", {
+                  required: {
+                    value: true,
+                  },
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: "40ch",
+                }}
+              />
+            </Box>
+            <Box>
+              <TextField
+                id="outlined-multiline-static"
+                label="Message"
+                name="message"
+                multiline
+                rows={4}
+                {...register("message", {
+                  required: true,
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: "40ch",
+                }}
+              />
+            </Box>
+            <Button
+              variant="outlined"
+              color="primary"
               sx={{
-                m: 0.8,
-                width: "40ch",
+                mt: 0.8,
+                ml: 3.5,
+                minWidth: "40ch",
               }}
-            />
-          </div>
-          <div>
-            <TextField
-              label="Email"
-              name="email"
-              id="outlined-size-small"
-              size="small"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              })}
-              sx={{
-                m: 0.8,
-                width: "40ch",
-              }}
-            />
-          </div>
-          <div>
-            <TextField
-              label="Subject"
-              name="subject"
-              id="outlined-size-small"
-              size="small"
-              {...register("subject", {
-                required: {
-                  value: true,
-                  message: "Please enter a subject",
-                },
-                maxLength: {
-                  value: 75,
-                  message: "Subject cannot exceed 75 characters",
-                },
-              })}
-              sx={{
-                m: 0.8,
-                width: "40ch",
-              }}
-            />
-          </div>
-          <div>
-            <TextField
-              id="outlined-multiline-static"
-              label="Message"
-              name="message"
-              multiline
-              rows={4}
-              {...register("message", {
-                required: true,
-              })}
-              sx={{
-                m: 0.8,
-                width: "40ch",
-              }}
-            />
-          </div>
-          <Button
-            variant="outlined"
-            color="primary"
-            sx={{
-              mt: 0.8,
-              ml: 3.5,
-              width: "40ch",
-            }}
-            value="Submit"
-            onClick={handleSubmit(onSubmit)}
-          >
-            Send
-          </Button>
-        </form>
-      </Box>
-      <ToastContainer />
+              value="Submit"
+              onClick={handleSubmit(onSubmit)}
+            >
+              Send
+            </Button>
+          </form>
+        </Box>
+
+        <ToastContainer />
+      </Paper>
     </Box>
   );
 };

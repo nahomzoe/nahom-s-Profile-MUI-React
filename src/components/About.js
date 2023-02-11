@@ -18,8 +18,8 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 export default function About() {
   return (
     <Grid container spacing={6}>
-      <Grid item xs>
-        <Card sx={{ maxWidth: "28.5rem", float: "right", mt: 5.5 }}>
+      <Grid item xs sx={{ margin: "auto" }}>
+        <Card sx={{ maxWidth: "28.5rem", float: "right" }}>
           {/* <Typography gutterBottom variant="h5" component="div">
         Lizard
       </Typography> */}
@@ -35,7 +35,7 @@ export default function About() {
         </Card>
       </Grid>
 
-      <Grid item xs={8}>
+      <Grid item xs={8} sx={{ margin: "auto", maxWidth: 500, p: 4 }}>
         <Typography variant="body2" color="text.secondary">
           <Typography gutterBottom variant="h5" component="div">
             About

@@ -35,7 +35,7 @@ export default function Projects() {
       </Typography>
       <Grid
         container
-        spacing={{ xs: 1, md: 6 }}
+        spacing={{ xs: 8, md: 6 }}
         columns={{ xs: 2, sm: 8, md: 16 }}
       >
         <Grid item xs={2} sm={4} md={4}>
@@ -70,6 +70,7 @@ export default function Projects() {
             </CardActions>
           </Card>
         </Grid>
+
         <Grid item xs={2} sm={4} md={4}>
           <Card sx={{ maxWidth: 500 }}>
             <CardMedia

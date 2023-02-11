@@ -3,6 +3,7 @@ import About from "./About";
 import Title from "./Title";
 import Projects from "./Projects";
 import Testimony from "./Testimony";
+import Contact from "./Contact";
 import FormModal from "./FormModal";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -48,7 +49,6 @@ const Home = () => {
           container
           spacing={{ xs: 2, md: 4 }}
           columns={{ xs: 2, sm: 8, md: 12 }}
-          style={{ margin: "auto" }}
         >
           {testimonies &&
             testimonies.map((testimony) => (
@@ -57,6 +57,9 @@ const Home = () => {
               </Grid>
             ))}
         </Grid>
+      </Box>
+      <Box sx={{ flexGrow: 1, mt: 10 }}>
+        <Contact sx={{ marginTop: "2rem" }} />
       </Box>
       {/* <Button onClick={trigger}>Hello</Button> */}
 

@@ -62,7 +62,7 @@ export default function Testimony({ testimony }) {
 
   return (
     <Box>
-      <Card sx={{ maxWidth: 400, pt: 2 }}>
+      <Card sx={{ maxWidth: 400, pt: 2, margin: "auto" }}>
         <CardMedia
           component="img"
           height="194"
