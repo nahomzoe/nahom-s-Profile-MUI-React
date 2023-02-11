@@ -18,7 +18,7 @@ const Contact = () => {
   const toastifySuccess = () => {
     toast("Form sent!", {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: 6000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
@@ -59,86 +59,109 @@ const Contact = () => {
   };
 
   return (
-    <Box
-      component="form"
-      sx={{
-        "& .MuiTextField-root": { m: 0.8, width: "40ch" },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div>
-          <TextField
-            label="Name"
-            name="name"
-            id="outlined-size-small"
-            size="small"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Please enter your name",
-              },
-              maxLength: {
-                value: 30,
-                message: "Please use 30 characters or less",
-              },
-            })}
-          />
-        </div>
-        <div>
-          <TextField
-            label="Email"
-            name="email"
-            id="outlined-size-small"
-            size="small"
-            {...register("email", {
-              required: true,
-              pattern:
-                /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-            })}
-          />
-        </div>
-        <div>
-          <TextField
-            label="Subject"
-            name="subject"
-            id="outlined-size-small"
-            size="small"
-            {...register("subject", {
-              required: {
-                value: true,
-                message: "Please enter a subject",
-              },
-              maxLength: {
-                value: 75,
-                message: "Subject cannot exceed 75 characters",
-              },
-            })}
-          />
-        </div>
-        <div>
-          <TextField
-            id="outlined-multiline-static"
-            label="Message"
-            name="message"
-            multiline
-            rows={4}
-            {...register("message", {
-              required: true,
-            })}
-          />
-        </div>
-        <Button
-          variant="outlined"
-          color="primary"
-          style={{ marginTop: "0.7rem" }}
-          value="Submit"
-          onClick={handleSubmit(onSubmit)}
-        >
-          Send
-        </Button>
-      </form>
+    <Box sx={{ maxWidth: "20rem", alignItems: "center" }}>
+      <Box
+        component="form"
+        sx={{
+          ml: "150%",
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
+          <div>
+            <TextField
+              label="Name"
+              name="name"
+              id="outlined-size-small"
+              size="small"
+              {...register("name", {
+                required: {
+                  value: true,
+                  message: "Please enter your name",
+                },
+                maxLength: {
+                  value: 30,
+                  message: "Please use 30 characters or less",
+                },
+              })}
+              sx={{
+                m: 0.8,
+                width: "40ch",
+              }}
+            />
+          </div>
+          <div>
+            <TextField
+              label="Email"
+              name="email"
+              id="outlined-size-small"
+              size="small"
+              {...register("email", {
+                required: true,
+                pattern:
+                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              })}
+              sx={{
+                m: 0.8,
+                width: "40ch",
+              }}
+            />
+          </div>
+          <div>
+            <TextField
+              label="Subject"
+              name="subject"
+              id="outlined-size-small"
+              size="small"
+              {...register("subject", {
+                required: {
+                  value: true,
+                  message: "Please enter a subject",
+                },
+                maxLength: {
+                  value: 75,
+                  message: "Subject cannot exceed 75 characters",
+                },
+              })}
+              sx={{
+                m: 0.8,
+                width: "40ch",
+              }}
+            />
+          </div>
+          <div>
+            <TextField
+              id="outlined-multiline-static"
+              label="Message"
+              name="message"
+              multiline
+              rows={4}
+              {...register("message", {
+                required: true,
+              })}
+              sx={{
+                m: 0.8,
+                width: "40ch",
+              }}
+            />
+          </div>
+          <Button
+            variant="outlined"
+            color="primary"
+            sx={{
+              mt: 0.8,
+              ml: 3.5,
+              width: "40ch",
+            }}
+            value="Submit"
+            onClick={handleSubmit(onSubmit)}
+          >
+            Send
+          </Button>
+        </form>
+      </Box>
+      <ToastContainer />
     </Box>
   );
 };
