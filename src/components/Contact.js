@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import { Card } from "@mui/material";
 
 const Contact = () => {
   const {
@@ -62,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <Box sx={{ margin: "auto" }}>
+    <Box sx={{ margin: "auto", textAlign: "center" }}>
       <Typography
         variant="h5"
         component="h2"
@@ -73,13 +74,10 @@ const Contact = () => {
       <Typography variant="h6" component="h2" sx={{ textAlign: "center" }}>
         Your message
       </Typography>
-      <Paper
+      <Box
         sx={{
           margin: "auto",
-          p: 3,
-          width: "47ch",
-          backgroundColor: (theme) =>
-            theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+          p: 5,
         }}
       >
         <Box component="form" noValidate autoComplete="off">
@@ -156,7 +154,7 @@ const Contact = () => {
               color="primary"
               sx={{
                 mt: 0.8,
-                ml: 3.5,
+
                 minWidth: 310,
               }}
               value="Submit"
@@ -168,7 +166,7 @@ const Contact = () => {
         </Box>
 
         <ToastContainer />
-      </Paper>
+      </Box>
     </Box>
   );
 };
