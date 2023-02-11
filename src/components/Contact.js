@@ -75,10 +75,10 @@ const Contact = () => {
         Your message
       </Typography>
       <Box
-        sx={{
-          margin: "auto",
-          p: 5,
-        }}
+      // sx={{
+      //   margin: "auto",
+      //   p: 5,
+      // }}
       >
         <Box component="form" noValidate autoComplete="off">
           <form onSubmit={handleSubmit(onSubmit)}>
