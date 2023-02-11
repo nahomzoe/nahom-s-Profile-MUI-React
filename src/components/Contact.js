@@ -74,99 +74,100 @@ const Contact = () => {
       <Typography variant="h6" component="h2" sx={{ textAlign: "center" }}>
         Your message
       </Typography>
-      {/* <Box
-      // sx={{
-      //   margin: "auto",
-      //   p: 5,
-      // }}
-      >  */}
-      <Box component="form" noValidate autoComplete="off">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Box>
-            <TextField
-              label="Name"
-              name="name"
-              id="outlined-size-small"
-              size="small"
-              {...register("name", {
-                required: {
-                  value: true,
-                },
-              })}
+      <Box
+        sx={{
+          margin: "auto",
+          p: 5,
+        }}
+      >
+        <Box component="form" noValidate autoComplete="off">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Box>
+              <TextField
+                label="Name"
+                name="name"
+                id="outlined-size-small"
+                size="small"
+                {...register("name", {
+                  required: {
+                    value: true,
+                  },
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: 312,
+                }}
+              />
+            </Box>
+            <Box>
+              <TextField
+                label="Email"
+                name="email"
+                id="outlined-size-small"
+                size="small"
+                {...register("email", {
+                  required: true,
+                  pattern:
+                    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: 312,
+                }}
+              />
+            </Box>
+            <Box>
+              <TextField
+                label="Subject"
+                name="subject"
+                id="outlined-size-small"
+                size="small"
+                {...register("subject", {
+                  required: {
+                    value: true,
+                  },
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: 312,
+                }}
+              />
+            </Box>
+            <Box>
+              <TextField
+                id="outlined-multiline-static"
+                label="Message"
+                name="message"
+                multiline
+                rows={4}
+                {...register("message", {
+                  required: true,
+                })}
+                sx={{
+                  m: 0.8,
+                  minWidth: 312,
+                }}
+              />
+            </Box>
+            <Button
+              variant="outlined"
+              color="primary"
               sx={{
-                m: 0.8,
-                minWidth: 350,
-              }}
-            />
-          </Box>
-          <Box>
-            <TextField
-              label="Email"
-              name="email"
-              id="outlined-size-small"
-              size="small"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              })}
-              sx={{
-                m: 0.8,
-                minWidth: 350,
-              }}
-            />
-          </Box>
-          <Box>
-            <TextField
-              label="Subject"
-              name="subject"
-              id="outlined-size-small"
-              size="small"
-              {...register("subject", {
-                required: {
-                  value: true,
-                },
-              })}
-              sx={{
-                m: 0.8,
-                minWidth: 350,
-              }}
-            />
-          </Box>
-          <Box>
-            <TextField
-              id="outlined-multiline-static"
-              label="Message"
-              name="message"
-              multiline
-              rows={4}
-              {...register("message", {
-                required: true,
-              })}
-              sx={{
-                m: 0.8,
-                minWidth: 350,
-              }}
-            />
-          </Box>
-          <Button
-            variant="outlined"
-            color="primary"
-            sx={{
-              mt: 0.8,
+                mt: 0.8,
 
-              minWidth: 310,
-            }}
-            value="Submit"
-            onClick={handleSubmit(onSubmit)}
-          >
-            Send
-          </Button>
-        </form>
+                minWidth: 180,
+              }}
+              value="Submit"
+              onClick={handleSubmit(onSubmit)}
+            >
+              Send
+            </Button>
+          </form>
+        </Box>
+
+        <ToastContainer />
+        {/* </Box> */}
       </Box>
-
-      <ToastContainer />
-      {/* </Box> */}
     </Box>
   );
 };
