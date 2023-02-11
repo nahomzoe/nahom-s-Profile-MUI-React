@@ -34,6 +34,7 @@ export default function About() {
       </CardContent> */}
         </Card>
       </Grid>
+
       <Grid item xs={8}>
         <Typography variant="body2" color="text.secondary">
           <Typography gutterBottom variant="h5" component="div">
