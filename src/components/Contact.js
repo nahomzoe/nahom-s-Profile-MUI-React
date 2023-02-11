@@ -97,7 +97,7 @@ const Contact = () => {
                 })}
                 sx={{
                   m: 0.8,
-                  minWidth: "40ch",
+                  minWidth: 350,
                 }}
               />
             </Box>
@@ -114,7 +114,7 @@ const Contact = () => {
                 })}
                 sx={{
                   m: 0.8,
-                  minWidth: "40ch",
+                  minWidth: 350,
                 }}
               />
             </Box>
@@ -131,7 +131,7 @@ const Contact = () => {
                 })}
                 sx={{
                   m: 0.8,
-                  minWidth: "40ch",
+                  minWidth: 350,
                 }}
               />
             </Box>
@@ -147,7 +147,7 @@ const Contact = () => {
                 })}
                 sx={{
                   m: 0.8,
-                  minWidth: "40ch",
+                  minWidth: 350,
                 }}
               />
             </Box>
@@ -157,7 +157,7 @@ const Contact = () => {
               sx={{
                 mt: 0.8,
                 ml: 3.5,
-                minWidth: "40ch",
+                minWidth: 310,
               }}
               value="Submit"
               onClick={handleSubmit(onSubmit)}

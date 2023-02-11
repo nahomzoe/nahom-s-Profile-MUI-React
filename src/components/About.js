@@ -35,7 +35,7 @@ export default function About() {
         </Card>
       </Grid>
 
-      <Grid item xs={8} sx={{ margin: "auto", maxWidth: 500, p: 4 }}>
+      <Grid item xs={8} sx={{ margin: "auto" }}>
         <Typography variant="body2" color="text.secondary">
           <Typography gutterBottom variant="h5" component="div">
             About
