@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div>
       <Title />
-      <About style={{ float: "right" }} />
+      <About />
 
       <Projects />
 

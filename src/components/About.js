@@ -17,7 +17,11 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function About() {
   return (
-    <Grid container spacing={6}>
+    <Grid
+      container
+      spacing={{ xs: 8, md: 6 }}
+      columns={{ xs: 2, sm: 10, md: 14 }}
+    >
       <Grid item xs sx={{ margin: "auto" }}>
         <Card sx={{ maxWidth: "28.5rem", float: "right" }}>
           {/* <Typography gutterBottom variant="h5" component="div">
@@ -28,6 +32,7 @@ export default function About() {
             alt="green iguana"
             // height="540"
             src={picNahom}
+            sx={{ margin: "auto" }}
           />
           {/* <CardContent>
       
@@ -36,11 +41,17 @@ export default function About() {
       </Grid>
 
       <Grid item xs={8} sx={{ margin: "auto" }}>
-        <Typography variant="body2" color="text.secondary">
-          <Typography gutterBottom variant="h5" component="div">
-            About
-          </Typography>
-          <RiDoubleQuotesL style={{ color: "rgb(188, 137, 42)" }} />
+        <Typography gutterBottom variant="h5" component="div">
+          About
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ margin: "auto", maxWidth: "600px" }}
+        >
+          <RiDoubleQuotesL
+            style={{ color: "rgb(188, 137, 42)", maxWidth: "600px" }}
+          />
           Junior web developer adept in all stages of advanced web development.
           Knowledgeable in user interface, testing, and debugging processes.
           Bringing forth expertise in design, installation, testing and
@@ -52,34 +63,10 @@ export default function About() {
           the set. Able to effectively self-manage during independent projects,
           as well as collaborate in a team setting.
           <RiDoubleQuotesR style={{ color: "rgb(188, 137, 42)" }} />
+          <br />
+          <br />
+          <Divider />
         </Typography>
-        <br />
-        <Divider />
-        <br />
-        {/* <List>
-          <ListItemText>
-            {" "}
-            . Involved in finding solutions for problems that have been hidden.
-          </ListItemText>
-          <ListItemText>
-            {" "}
-            . Worked as a productive and positive team member to design, code,
-            test, report, and debug operations.
-          </ListItemText>
-          <ListItemText>
-            {" "}
-            . Managed front and back-end in my personal project.
-          </ListItemText>
-          <ListItemText>
-            {" "}
-            . Successfully identified, diagnosed, and fixed website problems,
-            including broken links, typographical errors, and formatting issues.
-          </ListItemText>
-          <ListItemText>
-            . Evaluated and became knowledgeable in new standards, technologies,
-            and trends in website development.
-          </ListItemText>
-        </List> */}
       </Grid>
     </Grid>
   );
