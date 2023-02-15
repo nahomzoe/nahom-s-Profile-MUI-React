@@ -64,7 +64,10 @@ export default function Projects() {
               >
                 Github
               </Button>
-              <Button size="small" href="https://cook-it-app-v2.vercel.app/">
+              <Button
+                size="small"
+                href="https://cook-it-recipe-app-react-firebase-v2.vercel.app/"
+              >
                 Deployed
               </Button>
             </CardActions>
@@ -126,7 +129,7 @@ export default function Projects() {
               </Button>
               <Button
                 size="small"
-                href="https://unique-faloodeh-ce5a33.netlify.app"
+                href="https://countries-api-weather-api-redux-rtk.vercel.app/"
               >
                 Deployed
               </Button>
