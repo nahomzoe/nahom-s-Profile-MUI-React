@@ -57,7 +57,7 @@ export default function About() {
           Bringing forth expertise in design, installation, testing and
           maintenance of web systems. Equipped with a diverse and promising
           skill-set. Trained in an assortment of technologies, including HTML,
-          CSS, JavaScript, React,Redux,TypeScript,Node.js, PHP, Symfony,
+          CSS, JavaScript, React ,Redux, TypeScript, Node.js, PHP, Symfony,
           Continuous Integration(AWS), Unit Testing, Content Management(Drupal),
           MariaDB, and Microsoft SQL Server. Also Figma,Trello and Docker are in
           the set. Able to effectively self-manage during independent projects,

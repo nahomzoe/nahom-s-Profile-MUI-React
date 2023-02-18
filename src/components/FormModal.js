@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Chip from "@mui/material/Chip";
+import Tooltip from "@mui/material/Tooltip";
 import { useSnackbar } from "notistack";
 
 const style = {
@@ -133,28 +134,36 @@ export default function FormModal() {
               />
 
               <br />
-              <TextField
-                id="outlined-multiline-flexible"
-                label="Picture link"
-                multiline
-                maxRows={4}
-                style={{ width: "100%", marginBottom: "0.6rem" }}
-                name="imageUrl"
-                value={imageUrl}
-                onChange={changeHandler}
-              />
+              <Tooltip
+                describeChild
+                arrow
+                title="You can open your Linkedin profile picture in new tab, copy the link and paste it here."
+              >
+                <TextField
+                  id="outlined-multiline-flexible"
+                  label="Picture link"
+                  multiline
+                  maxRows={4}
+                  style={{ width: "100%", marginBottom: "0.6rem" }}
+                  name="imageUrl"
+                  value={imageUrl}
+                  onChange={changeHandler}
+                />
+              </Tooltip>
 
               <br />
-              <TextField
-                id="outlined-multiline-flexible"
-                label="Linkedin"
-                multiline
-                maxRows={4}
-                style={{ width: "100%", marginBottom: "0.6rem" }}
-                name="linkedinUrl"
-                value={linkedinUrl}
-                onChange={changeHandler}
-              />
+              <Tooltip describeChild arrow title="Your Linkedin link.">
+                <TextField
+                  id="outlined-multiline-flexible"
+                  label="Linkedin"
+                  multiline
+                  maxRows={4}
+                  style={{ width: "100%", marginBottom: "0.6rem" }}
+                  name="linkedinUrl"
+                  value={linkedinUrl}
+                  onChange={changeHandler}
+                />
+              </Tooltip>
 
               <Button
                 variant="outlined"
