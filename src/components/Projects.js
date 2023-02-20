@@ -85,7 +85,7 @@ export default function Projects() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Kitchen Managment app
+                Kitchen Management app
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 This is kitchen management tool. It is meant to immensely help
