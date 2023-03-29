@@ -50,7 +50,7 @@ function Header(props) {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton href="/testimonials" sx={{ textAlign: "center" }}>
+          <ListItemButton href="/testimony" sx={{ textAlign: "center" }}>
             <ListItemText primary="Testimonials" />
           </ListItemButton>
         </ListItem>
@@ -103,7 +103,7 @@ function Header(props) {
             </Button>
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button href="/testimonials" sx={{ color: "#fff" }}>
+            <Button href="/testimony" sx={{ color: "#fff" }}>
               Testimonials
             </Button>
           </Box>
